@@ -1,0 +1,46 @@
+
+<article <?=(!empty($is_h1))?'class="no-border"':''?> id="pub_<?=$pub->id?>">
+    <header>
+        <?=_user::avatar($pub->usuario)?>
+        <span>
+            <b><?=$pub->usuario->apodo?></b><br>
+            <?php for ($i=1; $i<=$pub->usuario->rol; ++$i):
+                echo _img::icon('md/star');
+            endfor; ?>
+        </span>
+        <time><?=_date::ago($pub->publicado)?></time>
+    </header>
+    <section>
+        <?php if (!empty($is_h1)): ?>
+            <h1><?=$pub->titulo?></h1>
+        <?php else: ?>
+            <h2><a href="/nuevas/<?=$pub->slug?>"><?=$pub->titulo?></a></h2>
+        <?php endif; ?>
+    </section>
+    <div>
+        <?=empty($vistas[$pub->idu])?'':_img::src("/img/vistas_previas/{$vistas[$pub->idu]->idu}", $vistas[$pub->idu]->image)?>
+
+        <?=_img::src("/img/usuarios/$pub->usuarios_idu", $pub->fotos)?>
+    </div>
+    <section>
+        <p><?=$pub->contenido_formateado?></p>
+    </section>
+    <footer>
+        <small class="comentarios">
+            <?php if ($pub->fragmentos): ?>
+                <hr><?=$pub->fragmentos?><hr>
+            <?php endif; ?>
+        </small>
+    </footer>
+    <footer>
+        <a role="button" class="notificar" data-ajax="#pub_<?=$pub->id?> .notificar" href="/ciudadanos/publicaciones/notificar/<?=$pub->idu?>"><?php include APP_PATH . 'views/ciudadanos/publicaciones/notificar.phtml'; ?></a>
+
+        <a role="button" data-share="https://roleplus.app/nuevas/<?=$pub->slug?>" href="#snackbar-url-copied"><?=_img::icon('md/share')?></a>
+
+        <a role="button" data-ajax="#pub_<?=$pub->id?> .comentarios" href="/nuevas/comentarios/<?=$pub->idu?>"><?=_img::icon('md/comment')?><?=$pub->comentarios?> <?=t('comentarios')?><br><?=t('¿Comentar?')?></a>
+
+        <a role="button" class="corazon" data-ajax="#pub_<?=$pub->id?> .corazon" href="/ciudadanos/publicaciones/corazon/<?=$pub->idu?>"><?php include APP_PATH . 'views/ciudadanos/publicaciones/corazon.phtml'; ?></a>
+
+        <a role="button" href="#"><?=_img::icon('md/visibility_off')?></a>
+    </footer>
+</article>

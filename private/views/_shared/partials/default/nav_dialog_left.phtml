@@ -1,0 +1,56 @@
+<nav>
+    <a href="#dialog-left"><?=_img::icon('md/terminal')?> Terminal</a>
+
+    <a href="/nuevas"><?=_img::icon('md/radar')?> Radar <sup></sup></a>
+
+    <a href="#groups"><?=_img::icon('md/warehouse')?> Hangares</a>
+
+    <a href="#chats"><?=_img::icon('md/radio')?> Intercom</a>
+
+    <a href="#notis"><?=_img::icon('md/sensors')?> Sensores</a>
+
+    <a href="#person"><?=_img::icon('md/badge')?> Credencial</a>
+</nav>
+
+<dialog id="dialog-left" class="fondo-terminal">
+    <nav class="monitor-screen">
+            <?php if (!Session::get('idu')): ?>
+                <a href="/usuarios/identificarse"><?=_img::icon('md/login')?> Abordar</a>
+            <?php endif; ?>
+
+            <a href="/nuevas"><?=_img::icon('md/radar')?> Radar</a>
+
+            <a href="#self_improvement"><?=_img::icon('md/memory')?> Implantes</a>
+
+            <a href="#person_search"><?=_img::icon('md/engineering')?> Tripulación</a>
+
+            <a href="#circles"><?=_img::icon('md/cabin')?> Camarotes</a>
+
+            <a href="#groups"><?=_img::icon('md/warehouse')?> Hangares</a>
+
+            <a href="#chat"><?=_img::icon('md/radio')?> Intercom</a>
+
+            <a href="#notifications"><?=_img::icon('md/sensors')?> Sensores</a>
+
+            <a href="#blogs"><?=_img::icon('md/auto_stories')?> Bitácoras</a>
+
+            <a href="#channels"><?=_img::icon('md/view_in_ar')?> Holocubierta</a>
+
+            <a href="#ev3"><?=_img::icon('md/science')?> Laboratorio</a>
+
+            <a href="/palancas"><?=_img::icon('md/precision_manufacturing')?> Sala de Máquinas</a>
+
+            <a href="/pergaminos/creditos"><?=_img::icon('md/inventory_2')?> Bodega</a>
+
+            <a href="#faqs"><?=_img::icon('md/menu_book')?> Manual de Vuelo</a>
+
+            <a href="#stats"><?=_img::icon('md/monitor_heart')?> Diagnóstico</a>
+
+            <?php if (Session::get('idu')): ?>
+                <a href="/usuarios/salir"><?=_img::icon('md/logout')?> Desembarcar</a>
+            <?php endif; ?>
+
+            <a href="#close"><?=_img::icon('md/close')?> Cerrar</a>
+    </nav>
+</dialog>
+<a href="#overlay"></a>

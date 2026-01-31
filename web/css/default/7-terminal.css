@@ -1,0 +1,14 @@
+.fondo-terminal {
+    position: fixed;
+    inset: 0;
+    /* Ocupa toda la pantalla */
+    z-index: -1;
+    /* Detrás del contenido */
+    box-sizing: border-box;
+
+    /* Configuración del Marco 9-Slice */
+    border-style: solid;
+    border-width: 50vh 50vw;
+    /* El borde ocupa la mitad exacta de la pantalla */
+    border-image: url('/img/fondos/terminan.webp') 540 960 fill / 50vh 50vw stretch;
+}

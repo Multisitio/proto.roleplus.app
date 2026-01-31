@@ -1,0 +1,92 @@
+/* R+4 Branding Fonts */
+
+:root {
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Roboto', 'Verdana', sans-serif;
+    --font-list: 'Consolas', 'Courier New', monospace;
+
+    /* Font Sizes from Brand Board */
+    --size-h1: 48px;
+    --size-h2: 36px;
+    --size-h3: 30px;
+    --size-h4: 24px;
+    --size-h5: 18px;
+    --size-text: 15px;
+    --size-list: 16px;
+    --size-small: 13px;
+}
+
+/* Base Body Update */
+body,
+html {
+    font-family: var(--font-body);
+    font-size: var(--size-text);
+}
+
+/* Headings Upgrade */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title,
+.heading {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    /* Light as requested */
+    font-variant: normal;
+    /* Resetting small-caps from legacy */
+}
+
+h1 {
+    font-size: var(--size-h1);
+}
+
+h2 {
+    font-size: var(--size-h2);
+}
+
+h3 {
+    font-size: var(--size-h3);
+}
+
+h4 {
+    font-size: var(--size-h4);
+}
+
+h5 {
+    font-size: var(--size-h5);
+}
+
+/* List Styling */
+ul,
+ol,
+li,
+.list-item {
+    font-family: var(--font-list);
+    font-size: var(--size-list);
+}
+
+/* Small Text / Annotations */
+small,
+.annotation,
+.note {
+    font-family: var(--font-body);
+    font-size: var(--size-small);
+}
+
+/* Override legacy Norse font in Nav and Dialogs */
+:is(nav, dialog) a {
+    font-family: var(--font-heading) !important;
+    /* Force override of 1-fonts.css */
+    font-variant: normal;
+    /* Reset small-caps */
+    text-transform: uppercase;
+    /* Match the style but with Orbitron */
+}
+
+/* Overrides for specific elements to match brand board if needed */
+article p {
+    font-size: var(--size-text);
+}

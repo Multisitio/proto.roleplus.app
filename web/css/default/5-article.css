@@ -1,0 +1,24 @@
+article {
+    align-self: center;
+    margin-block: auto;
+    max-width: 640px;
+    width: 100%;
+}
+
+article>div {
+    gap: 5px;
+}
+
+article>div>img {
+    flex: 1;
+    width: calc(calc(100% - 5px) / 2);
+    align-self: stretch;
+}
+
+/*[data-theme=dark] article svg {
+    filter: invert(1);
+} BAD IDEA */
+
+article time {
+    margin-left: auto;
+}

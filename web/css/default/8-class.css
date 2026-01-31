@@ -1,0 +1,39 @@
+.avatar {
+    border-radius: 50%;
+    box-shadow: var(--article-box-shadow);
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.avatar.size-45 {
+    height: 45px;
+    width: 45px;
+}
+
+.avatar.size-90 {
+    height: 90px;
+    width: 90px;
+}
+
+.avatar img {
+    border-radius: 50%;
+}
+
+.comentarios p {
+    display: flex;
+    gap: 10px;
+}
+
+.no-border {
+    border: 0;
+    box-shadow: 0 0;
+}
+
+#important .pressed  {
+    background: var(--color);
+    color: var(--background);
+}
+
+#important .pressed svg {
+    fill: black;
+}

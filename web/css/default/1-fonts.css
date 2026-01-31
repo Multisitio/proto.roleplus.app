@@ -1,0 +1,25 @@
+html,
+body,
+small {
+    font-family: var(--font-body, 'Roboto', sans-serif);
+}
+
+body {
+    font-size: 1rem;
+}
+
+h1 {
+    font-family: var(--font-heading, 'Orbitron', sans-serif);
+    font-variant: normal;
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--font-heading, 'Orbitron', sans-serif);
+    font-variant: normal;
+}
+
+:is(nav, dialog) a {
+    font-family: var(--font-heading, 'Orbitron', sans-serif);
+    text-transform: uppercase;
+}

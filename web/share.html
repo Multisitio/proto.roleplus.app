@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Web Share Target Handler</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/manifest.json" rel="manifest">
+    <meta name="theme-color" content="#4a148c">
+    <style>
+        body {
+            background: #f3e5f5;
+            font-family: 'Helvetica, Arial, sans-serif';
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        button[disabled] {
+            opacity: 0.5;
+            border: 1px solid rgba(74, 20, 140, 0.5) !important;
+        }
+
+        #installContainer {
+            position: absolute;
+            bottom: 1em;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        #installContainer button {
+            background: inherit;
+            border: 1px solid #4a148c;
+            font-size: 1em;
+            padding: 0.75em;
+        }
+
+        #butInstall {
+            margin-left: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Web Share Target Handler</h1>
+    <p>
+        <b>href:</b> <code><span id="href"></span></code>
+    </p>
+    <p>
+        <b>Query String Parameters:</b><br>
+        <b>title:</b> <code><span id="title"></span></code><br>
+        <b>text:</b> <code><span id="text"></span></code><br>
+        <b>url:</b> <code><span id="url"></span></code>
+    </p>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const parsedUrl = new URL(window.location);
+            document.getElementById('href').textContent = window.location.href;
+            document.getElementById('title').textContent = parsedUrl.searchParams.get('title');
+            document.getElementById('text').textContent = parsedUrl.searchParams.get('text');
+            document.getElementById('url').textContent = parsedUrl.searchParams.get('url');
+        });
+    </script>
+</body>
+
+</html>

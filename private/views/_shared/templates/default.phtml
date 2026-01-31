@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html data-color="yellow" data-theme="dark" id="important" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <?php View::partial('default/icons', null, ['ver' => $ver]); ?>
+
+        <link rel="manifest" href="/manifest.json?v=<?=$ver?>">
+
+        <link href="https://kumbiacss.com/css/kumbia.min.css?v=<?=$ver?>" rel="stylesheet">
+
+        <link href="/css/default.min.css?v=<?=$ver?>" rel="stylesheet">
+        <title>ROLEplus d4!</title>
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js?v=<?=$ver?>').then(async (registration) => {
+                    await navigator.serviceWorker.ready; // Esperar a que el Service Worker esté listo
+                    if ('SyncManager' in window) {
+                        try {
+                            await registration.sync.register('database-sync');
+                        } catch (error) {
+                            console.log("Background Sync failed.", error);
+                        }
+                    }
+                }).catch((error) => {
+                    console.log("Service Worker registration failed.", error);
+                });
+            }
+        </script>
+    </head>
+
+    <body>
+        <?php View::partial('toast'); ?>
+        
+        <?php View::partial('default/nav_dialog_left'); ?>
+        <main>
+            <?php View::content(); ?>
+        </main>
+
+        <script src="/javascript/default.min.js"></script>
+    </body>
+</html>

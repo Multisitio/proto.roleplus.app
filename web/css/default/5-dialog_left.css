@@ -1,0 +1,21 @@
+[id="dialog-left"] header h4 {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+[id="dialog-left"] header h4 svg {
+    --background: var(--surface);
+    height: 42px;
+    width: 42px;
+}
+
+[id="dialog-left"] ul {
+    margin-inline: 30px 0;
+}
+
+[id="dialog-left"] ul li {
+    margin: 0;
+    min-height: 42px;
+    padding: 0;
+}

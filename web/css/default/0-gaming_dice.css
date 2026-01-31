@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Gaming Dice';
+    src: url("/fonts/gaming_dice/regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Gaming Dice Bold';
+    src: url("/fonts/gaming_dice/bold.woff") format("woff");
+}
+
+.dice.bold {
+    color: var(--color);
+    font: 38px "Gaming Dice Bold";
+    vertical-align: middle;
+}
+
+.dice:not(.bold) {
+    color: var(--color);
+    font: 38px "Gaming Dice";
+    vertical-align: middle;
+}

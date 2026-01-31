@@ -1,0 +1,22 @@
+
+<h1><?=t('Palancas')?></h1>
+
+<article>
+    <form action="/ciudadanos/palancas/corazon" method="post">
+        <header>
+            <h2><?=t('¿Cómo de generoso soy cuando pulso el corazón en una publicación?')?></h2>
+        </header>
+        <section>
+            <?php foreach ([5, 10, 20, 50] as $val): ?>
+                <label>
+                    <input type="radio" name="corazon" value="<?=$val?>"<?=($val==$corazon->valor)?' checked':''?>>
+                    <?=$val?> PX
+                </label>
+            <?php endforeach; ?>
+            <small><em>Estos PX se transfieren de tu cuenta al autor.</em></small>
+        </section>
+        <footer>
+            <button type="submit"><?=_img::icon('md/check')?> <?=t('Aplicar')?></button>
+        </footer>
+    </form>
+</article>

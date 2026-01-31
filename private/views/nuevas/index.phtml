@@ -1,0 +1,11 @@
+
+<h1><?=t('Nuevas')?></h1>
+
+<?php foreach ($publicaciones as $pub):
+    include APP_PATH . 'views/nuevas/publicacion.phtml';
+endforeach; ?>
+
+<div id="snackbar-url-copied">
+    <p><?=t('URL copiada en el portapapeles.')?></p>
+    <a href="#close"><?=_img::icon('md/close')?></a>
+</div>

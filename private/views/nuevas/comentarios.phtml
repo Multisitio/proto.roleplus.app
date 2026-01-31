@@ -1,0 +1,15 @@
+
+<?php foreach ($publicacion->comentarios as $com): ?>
+    <hr>
+    <div>
+        <?=_user::avatar($com->usuario, 45)?>
+        <section>
+            <div>
+                <b><?=$com->usuario->apodo?></b> 
+                <time><?=_date::ago($com->publicado)?></time>
+            </div>
+            <?=$com->comentario?>
+        </section>
+    </div>
+<?php endforeach; ?>
+<hr>

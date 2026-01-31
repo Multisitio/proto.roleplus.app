@@ -1,0 +1,61 @@
+{
+	"background_color": "#000000",
+	"categories": [
+		"Juegos de rol",
+		"Comunidad",
+		"Social",
+		"Noticias",
+		"Recursos",
+		"Entretenimiento"
+	],
+	"description": "ROLEplus.app es una plataforma en línea dedicada a los juegos de rol, ofreciendo un boletín semanal, noticias, recursos y un espacio para compartir experiencias con otros aficionados.",
+	"dir": "ltr",
+	"display": "standalone",
+	"display_override": [
+		"standalone",
+		"browser"
+	],
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+	"id": "roleplus",
+	"lang": "es",
+	"name": "ROLEplus",
+	"orientation": "any",
+	"scope": "/",
+	"screenshots": [
+		{
+			"platform": "wide",
+			"sizes": "626x912",
+			"src": "/img/screenshots/home.jpg?v=2408",
+			"type": "image/jpeg"
+		},
+		{
+			"form_factor": "wide",
+			"sizes": "1280x912",
+			"src": "/img/screenshots/home_wide.jpg?v=2408",
+			"type": "image/jpeg"
+		}
+	],
+	"share_target": {
+		"action": "/share.html",
+		"enctype": "application/x-www-form-urlencoded",
+		"method": "GET",
+		"params": {
+			"text": "text",
+			"title": "title"
+		}
+	},
+	"short_name": "ROLEplus",
+	"start_url": "/",
+	"theme_color": "#ffff99"
+}

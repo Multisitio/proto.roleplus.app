@@ -1,0 +1,15 @@
+
+div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+div>section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+    padding-inline: 0;
+}

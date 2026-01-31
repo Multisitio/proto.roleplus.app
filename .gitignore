@@ -1,0 +1,8 @@
+﻿private/config/
+private/temp/
+web/img/
+web/fonts/
+web/audio/
+.vscode/
+*.log
+*.tmp

@@ -1,0 +1,26 @@
+
+<dialog class="terminal-dialog" open>
+    <form action="/usuarios/identificarse" method="post" class="monitor-screen">
+        <header>
+            <h1><?=_img::icon('md/login')?> Identificación</h1>
+        </header>
+
+        <section>
+            <input type="text" name="nombre" style="display:none" autocomplete="off">
+
+            <input type="text" name="apellidos" style="display:none" autocomplete="off">
+
+            <?php View::partial('google_login'); ?>
+
+            <?=Kucss::input('email', ['type'=>'email', 'required', 'autofocus'])?>
+
+            <?=Kucss::input('clave', ['type'=>'password', 'required'])?>
+        </section>
+
+        <footer>
+            <button type="submit">Iniciar Enlace</button>
+
+            <a href="/">[ Cancelar Conexión ]</a>
+        </footer>
+    </form>
+</dialog>

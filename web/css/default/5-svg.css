@@ -1,0 +1,4 @@
+
+[data-theme=dark] :not(a, button)>svg {
+    filter: invert(1);
+}
